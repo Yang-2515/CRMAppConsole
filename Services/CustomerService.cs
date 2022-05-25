@@ -1,9 +1,7 @@
-﻿using CRMAplication;
-using CRMApplication.Entities;
+﻿using CRMApplication.Entities;
 using CRMApplication.Repositories;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CRMApplication.Services

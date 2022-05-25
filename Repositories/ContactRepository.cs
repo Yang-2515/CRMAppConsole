@@ -2,10 +2,7 @@
 using CRMApplication.DTO;
 using CRMApplication.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CRMApplication.Repositories

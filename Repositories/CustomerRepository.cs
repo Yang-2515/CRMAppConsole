@@ -1,11 +1,6 @@
 ﻿using CRMApplication.Entities;
-using CRMApplication;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using CRMAplication;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace CRMApplication.Repositories

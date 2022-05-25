@@ -1,9 +1,5 @@
 ﻿using CRMApplication.Commons;
-using CRMApplication.DTO;
-using CRMApplication.Entities;
-using CRMApplication.Services;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CRMApplication.UI
@@ -38,6 +34,10 @@ namespace CRMApplication.UI
                         case "2":
                             //Create AddressType
                             await AddressTypeUI.CreateAddressType();
+                            break;
+                        case "3":
+                            //Create Contact
+                            await ContactUI.CreateContact();
                             break;
                     }
                     break;
@@ -79,7 +79,7 @@ namespace CRMApplication.UI
                     break;
             }
         }
-        internal static void CheckNumber(string id)
+        internal static int CheckNumber(string id)
         {
             while (!Helper.IsNumber(id))
             {
@@ -87,11 +87,13 @@ namespace CRMApplication.UI
                 Console.WriteLine("Write again:");
                 id = Console.ReadLine();
             }
+            return Convert.ToInt32(id);
         }
 
         public static bool CheckContinue()
         {
             int select = Convert.ToInt32(Console.ReadLine());
+
             if(select == 1)
             {
                 return true;
@@ -110,8 +112,7 @@ namespace CRMApplication.UI
         {
             Console.Write("Write " + name + " Id: ");
             var res = Console.ReadLine();
-            CheckNumber(res);
-            return Convert.ToInt32(res);
+            return CheckNumber(res);
         }
 
         public static string MenuSelection()
@@ -131,7 +132,7 @@ namespace CRMApplication.UI
 
                 case "2":
                     Console.WriteLine("======================================");
-                    Console.WriteLine("1. Create Customer \n2. Create Address Type");
+                    Console.WriteLine("1. Create Customer \n2. Create Address Type \n3. Create Contact For Customer");
                     break;
 
                 case "3":

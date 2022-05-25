@@ -1,5 +1,4 @@
-﻿using CRMApplication.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace CRMApplication.Entities
 {
